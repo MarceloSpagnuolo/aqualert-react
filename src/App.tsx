@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/home';
-import Splash from './pages/splash/splash';
+import Features from './components/features/features';
+import Home from './components/home/home';
+import Splash from './components/splash/splash';
+
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Splash />} />
-      <Route path='/home' element={<Home />} />
-    </Routes>
+    <div className="app-container" id="app">
+      <Splash />
+      <Home />
+      <Features />
+    </div>
   )
 }
 
