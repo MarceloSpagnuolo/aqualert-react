@@ -1,9 +1,10 @@
-import React from 'react';
-import './App.css';
-import Features from './components/features/features';
-import Home from './components/home/home';
-import Splash from './components/splash/splash';
-
+import React from "react";
+import "./App.css";
+import Facts from "./components/facts/facts";
+import Features from "./components/features/features";
+import Home from "./components/home/home";
+import Phrase from "./components/phrase/phrase";
+import Splash from "./components/splash/splash";
 
 function App() {
   return (
@@ -11,8 +12,10 @@ function App() {
       <Splash />
       <Home />
       <Features />
+      <Facts />
+      <Phrase />
     </div>
-  )
+  );
 }
 
 export default App;

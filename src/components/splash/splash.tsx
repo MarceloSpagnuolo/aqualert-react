@@ -5,61 +5,62 @@ import lottie from "lottie-web";
 import animationData from "../../assets/animations/home-animation.json";
 
 const Splash = (props: any) => {
-    const lottieRef = React.useRef<HTMLDivElement>(null);
+  const lottieRef = React.useRef<HTMLDivElement>(null);
 
-    React.useEffect(() => {
-        var animDuration = 1000;
-        const anim = lottie.loadAnimation({
-          container: lottieRef.current!,
-          renderer: "svg",
-          loop: false,
-          autoplay: false,
-          animationData
-        });
-        
-        function animatebodymovin(duration: number) {
-            const scrollPosition = window.scrollY;
-            const scrollMax = window.innerHeight + 1;
-            console.log(scrollMax - scrollPosition);
-            const maxFrames = anim.totalFrames;
-            let elem = document.getElementById("splash");
-            let home = document.getElementById("home");
-    
-          const frame = (maxFrames / ( scrollMax - scrollPosition - 1 )) * (scrollPosition / (duration / ( scrollMax - scrollPosition  )));
-    
-          anim.goToAndStop(frame, true);
+  React.useEffect(() => {
+    var animDuration = 1000;
+    const anim = lottie.loadAnimation({
+      container: lottieRef.current!,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      animationData,
+    });
 
-          if (scrollMax - scrollPosition === 1 && elem) {
-            elem.classList.add("animated");
-            elem.classList.add("fadeOut");
-            elem?.classList.add("short")
-            home?.classList.add("free")
-            home?.classList.add("animated")
-            home?.classList.add("fadeIn")
-            setTimeout(() => {
-            }, 1000);
-          }
-        }
-        const onScroll = () => {
-          animatebodymovin(animDuration);
-        };
-    
-        document.addEventListener("scroll", onScroll);
-    
-        return () => {
-          anim.destroy();
-          document.removeEventListener("scroll", onScroll);
-        };
-      }, []);
+    function animatebodymovin(duration: number) {
+      const scrollPosition = window.scrollY;
+      const scrollMax = window.innerHeight + 1;
+      console.log(scrollMax, scrollPosition);
+      const maxFrames = anim.totalFrames;
+      let elem = document.getElementById("splash");
+      let home = document.getElementById("home");
 
-    return (
-        <div className="splash-container" id="splash">
-            <img src={ background } alt="background" className="splash-background" />
-            <div className="animation-container">
-                <div className="animation" ref={lottieRef}></div>
-            </div>
-        </div>
-    )
-}
+      const frame =
+        (maxFrames / (scrollMax - scrollPosition - 1)) *
+        (scrollPosition / (duration / (scrollMax - scrollPosition)));
 
-export default Splash
+      anim.goToAndStop(frame, true);
+
+      if (scrollMax - scrollPosition === 1 && elem) {
+        elem.classList.add("animated");
+        elem.classList.add("fadeOut");
+        elem?.classList.add("short");
+        home?.classList.add("free");
+        home?.classList.add("animated");
+        home?.classList.add("fadeIn");
+        setTimeout(() => {}, 1000);
+      }
+    }
+    const onScroll = () => {
+      animatebodymovin(animDuration);
+    };
+
+    document.addEventListener("scroll", onScroll);
+
+    return () => {
+      anim.destroy();
+      document.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  return (
+    <div className="splash-container" id="splash">
+      <img src={background} alt="background" className="splash-background" />
+      <div className="animation-container">
+        <div className="animation" ref={lottieRef}></div>
+      </div>
+    </div>
+  );
+};
+
+export default Splash;
