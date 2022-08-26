@@ -40,6 +40,7 @@ const Splash = (props: any) => {
         setTimeout(() => {
           page?.classList.add("free");
         }, 500);
+
       }
     }
     const onScroll = () => {
