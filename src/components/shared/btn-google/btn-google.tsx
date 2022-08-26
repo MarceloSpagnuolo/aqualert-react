@@ -1,6 +1,6 @@
 import React from "react";
 import "./btn-google.css";
-import google from "../../../assets/images/google.png";
+import google from "../../../assets/svgs/GP.svg";
 
 const BtnGoogle = () => {
   return (

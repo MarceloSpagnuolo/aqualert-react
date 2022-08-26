@@ -30,6 +30,12 @@
   font-size: 24.8744px;
   line-height: 29px;
   margin-bottom: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.download-subtitle img {
+  margin-left: 20px;
 }
 
 .download-buttons {

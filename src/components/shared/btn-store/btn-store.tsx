@@ -1,6 +1,6 @@
 import React from "react";
 import "./btn-store.css";
-import store from "../../../assets/images/store.png";
+import store from "../../../assets/svgs/AS.svg";
 
 const BtnStore = () => {
   return (

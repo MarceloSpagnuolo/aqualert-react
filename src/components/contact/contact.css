@@ -107,7 +107,7 @@
   background: rgba(63, 204, 247, 0.06);
   backdrop-filter: blur(48.2659px);
   border-radius: 11.4919px;
-  border: none;
+  border: 1px solid var(--skyText);
   margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -116,6 +116,10 @@
   line-height: 19px;
   outline: none;
   padding: 0 20px;
+}
+
+.contact-right input:focus:not(:last-child) {
+  border: 1px solid var(--blueText);
 }
 
 .contact-right input:last-child {
@@ -149,7 +153,7 @@
   background: rgba(63, 204, 247, 0.06);
   backdrop-filter: blur(48.2659px);
   border-radius: 11.4919px;
-  border: none;
+  border: 1px solid var(--skyText);
   margin-bottom: 40px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -158,6 +162,10 @@
   line-height: 19px;
   outline: none;
   padding: 20px;
+}
+
+.contact-right textarea:focus {
+  border: 1px solid var(--blueText);
 }
 
 .contact-right textarea::placeholder {
