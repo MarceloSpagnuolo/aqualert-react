@@ -48,7 +48,10 @@
   margin-bottom: 60px;
 }
 
-.frames div {
+.frame-1,
+.frame-2,
+.frame-3,
+.frame-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

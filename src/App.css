@@ -6,11 +6,13 @@
 }
 
 .free {
-  position: relative;
+  position: relative !important;
+  display: block !important;
 }
 
 .page {
   top: 0;
   position: fixed;
   opacity: 0;
+  display: none;
 }

@@ -17,6 +17,7 @@ code {
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 .animated {
@@ -62,4 +63,49 @@ code {
 :root {
   --blueText: #080d68;
   --skyText: #3fccf7;
+}
+
+@keyframes fadeInBotttom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fadeInBottom {
+  animation-name: fadeInBotttom;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
 }

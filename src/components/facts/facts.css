@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   font-family: Raleway, sans-serif;
+  font-size: 20px;
   margin-top: 150px;
 }
 
@@ -29,7 +30,7 @@
   grid-template-columns: 0.5fr 2fr 0.5fr;
   column-gap: 40px;
   align-items: center;
-  font-size: 26px;
+  font-size: 1.1em;
   font-weight: 400;
   color: var(--blueText);
 }
@@ -37,23 +38,23 @@
 .fracts-frame-1,
 .fracts-frame-2,
 .fracts-frame-3 {
-  width: 200px;
-  height: 200px;
+  width: 186px;
+  height: 186px;
   background: linear-gradient(
     101.19deg,
     rgba(0, 108, 234, 0.8) 0.88%,
     rgba(63, 170, 247, 0.776) 97.78%
   );
-  box-shadow: 5.04646px 4.41565px 26.4939px rgba(0, 165, 234, 0.22),
-    inset 0px 0px 6.51466px 2.60586px rgba(255, 255, 255, 0.25);
-  border-radius: 60px;
+  box-shadow: 4.66844px 4.08489px 24.5093px rgba(0, 165, 234, 0.22),
+    inset 0px 0px 6.02666px 2.41066px rgba(255, 255, 255, 0.25);
+  border-radius: 54.6853px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .post {
-  font-size: 16px;
+  font-size: 0.8em;
   color: var(--skyText);
 }
 

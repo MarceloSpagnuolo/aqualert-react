@@ -34,6 +34,13 @@
   font-weight: 500;
   font-size: 30.3457px;
   line-height: 135.4%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.phrase-subtitle img {
+  margin-left: 20px;
 }
 
 .a {
