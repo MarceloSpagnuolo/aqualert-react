@@ -1,16 +1,25 @@
-import React from 'react';
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/home';
-import Splash from './pages/splash/splash';
+import React from "react";
+import "./App.css";
+import Contact from "./components/contact/contact";
+import Download from "./components/download/download";
+import Facts from "./components/facts/facts";
+import Features from "./components/features/features";
+import Home from "./components/home/home";
+import Phrase from "./components/phrase/phrase";
+import Splash from "./components/splash/splash";
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Splash />} />
-      <Route path='/home' element={<Home />} />
-    </Routes>
-  )
+    <div className="app-container" id="app">
+      <Splash />
+      <Home />
+      <Features />
+      <Facts />
+      <Phrase />
+      <Download />
+      <Contact />
+    </div>
+  );
 }
 
 export default App;
