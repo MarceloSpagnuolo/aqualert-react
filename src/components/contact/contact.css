@@ -115,6 +115,7 @@
   font-size: 0.8em;
   line-height: 19px;
   outline: none;
+  padding: 0 20px;
 }
 
 .contact-right input:last-child {
@@ -156,6 +157,7 @@
   font-size: 0.8em;
   line-height: 19px;
   outline: none;
+  padding: 20px;
 }
 
 .contact-right textarea::placeholder {

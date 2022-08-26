@@ -37,7 +37,7 @@ const Contact = (): JSX.Element => {
           <form action="" className="contact-form">
             <input type="text" name="name" placeholder="Name" />
             <input type="email" name="email" placeholder="Email" />
-            <textarea name="message" rows={10} placeholder="Message"></textarea>
+            <textarea name="message" rows={9} placeholder="Message"></textarea>
             <input type="submit" value="Send" />
           </form>
         </div>
