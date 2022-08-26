@@ -6,7 +6,7 @@ import BtnStore from "../shared/btn-store/btn-store";
 
 const Download = () => {
   return (
-    <div className="download-container">
+    <div className="download-container" id="download">
       <div className="download-content">
         <div className="download-left">
           <img src={download} alt="download" />

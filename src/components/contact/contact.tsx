@@ -7,7 +7,7 @@ import twitter from "../../assets/images/twitter.png";
 
 const Contact = (): JSX.Element => {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="contact-content">
         <div className="contact-left">
           <div className="contact-title">
