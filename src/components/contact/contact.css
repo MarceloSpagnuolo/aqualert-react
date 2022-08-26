@@ -167,3 +167,47 @@
   font-size: 0.8em;
   line-height: 19px;
 }
+
+.none {
+  display: none !important;
+}
+
+.contact-right-confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 55%;
+}
+
+.message-1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.message-2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 60px;
+}
+
+.message-3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135.4%;
+  color: var(--skyText);
+}
+
+.check {
+  margin-bottom: 40px;
+}
