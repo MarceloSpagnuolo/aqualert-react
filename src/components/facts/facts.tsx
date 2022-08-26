@@ -27,7 +27,7 @@ const Facts = () => {
                 with a 4.5 rating on stores!
               </span>
             </div>
-            <div>
+            <div className="facts-buttons">
               <img src={google} alt="google" />
               <img src={store} alt="store" />
             </div>
