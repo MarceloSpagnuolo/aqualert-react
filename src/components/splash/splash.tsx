@@ -23,7 +23,7 @@ const Splash = (props: any) => {
       console.log(scrollMax - scrollPosition);
       const maxFrames = anim.totalFrames;
       let elem = document.getElementById("splash");
-      let home = document.getElementById("home");
+      let page = document.getElementById("Page");
 
       const frame =
         (maxFrames / (scrollMax - scrollPosition - 1)) *
@@ -31,14 +31,15 @@ const Splash = (props: any) => {
 
       anim.goToAndStop(frame, true);
 
-      if (scrollMax - scrollPosition < 1 && elem) {
+      if (scrollMax - scrollPosition <= 1 && elem) {
         elem.classList.add("animated");
         elem.classList.add("fadeOut");
         elem?.classList.add("short");
-        home?.classList.add("free");
-        home?.classList.add("animated");
-        home?.classList.add("fadeIn");
-        setTimeout(() => {}, 1000);
+        page?.classList.add("animated");
+        page?.classList.add("fadeIn");
+        setTimeout(() => {
+          page?.classList.add("free");
+        }, 1000);
       }
     }
     const onScroll = () => {

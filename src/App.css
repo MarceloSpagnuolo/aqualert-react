@@ -8,3 +8,9 @@
 .free {
   position: relative;
 }
+
+.page {
+  top: 0;
+  position: fixed;
+  opacity: 0;
+}
