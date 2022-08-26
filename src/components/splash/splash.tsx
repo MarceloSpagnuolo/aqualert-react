@@ -20,7 +20,7 @@ const Splash = (props: any) => {
     function animatebodymovin(duration: number) {
       const scrollPosition = window.scrollY;
       const scrollMax = window.innerHeight + 1;
-      console.log(scrollMax, scrollPosition);
+      console.log(scrollMax - scrollPosition);
       const maxFrames = anim.totalFrames;
       let elem = document.getElementById("splash");
       let home = document.getElementById("home");
@@ -31,7 +31,7 @@ const Splash = (props: any) => {
 
       anim.goToAndStop(frame, true);
 
-      if (scrollMax - scrollPosition === 1 && elem) {
+      if (scrollMax - scrollPosition < 1 && elem) {
         elem.classList.add("animated");
         elem.classList.add("fadeOut");
         elem?.classList.add("short");
