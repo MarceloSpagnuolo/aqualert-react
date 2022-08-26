@@ -8,7 +8,7 @@ import BtnGetStarted from "../shared/btn-get-started/btn-get-started";
 
 const Features = (): JSX.Element => {
   return (
-    <div className="features-container">
+    <div className="features-container" id="about">
       <div className="features-content">
         <div className="title">
           <span>Are you having a hard time achieving</span>

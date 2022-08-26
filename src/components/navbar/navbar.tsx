@@ -22,13 +22,13 @@ const Navbar = () => {
           <span>aqualert</span>
         </div>
         <div className="menu">
-          <a href="/" className="navbar-link">
+          <a href="#about" className="navbar-link">
             About
           </a>
-          <a href="/" className="navbar-link">
+          <a href="#download" className="navbar-link">
             Donwload
           </a>
-          <a href="/" className="navbar-link">
+          <a href="#contact" className="navbar-link">
             Contact us
           </a>
         </div>
