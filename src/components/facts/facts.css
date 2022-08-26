@@ -68,3 +68,7 @@
 .text {
   margin-bottom: 30px;
 }
+
+.facts-buttons img:last-child {
+  margin-left: 60px;
+}
