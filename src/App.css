@@ -3,6 +3,7 @@
   height: 100%;
   min-height: 100vh;
   background-image: url("./assets/images/bg-home.png");
+  overflow: hidden;
 }
 
 .free {
