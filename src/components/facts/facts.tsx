@@ -25,8 +25,10 @@ const Facts = () => {
             delay={150}
             animateOnce={true}
           >
-            <div className="fracts-frame-1">
-              <img src={down} alt="down" />
+            <div className="right">
+              <div className="fracts-frame-1">
+                <img src={down} alt="down" />
+              </div>
             </div>
           </AnimationOnScroll>
           <AnimationOnScroll
@@ -82,8 +84,10 @@ const Facts = () => {
             delay={150}
             animateOnce={true}
           >
-            <div className="fracts-frame-3">
-              <img src={medall} alt="medall" />
+            <div className="right">
+              <div className="fracts-frame-3">
+                <img src={medall} alt="medall" />
+              </div>
             </div>
           </AnimationOnScroll>
           <AnimationOnScroll

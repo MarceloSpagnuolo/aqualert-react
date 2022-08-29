@@ -56,3 +56,15 @@
 .buttons div:nth-child(2) {
   margin-left: 60px;
 }
+
+@media (max-width: 1280px) {
+  .menu {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar-link {
+    font-size: 18px;
+  }
+}

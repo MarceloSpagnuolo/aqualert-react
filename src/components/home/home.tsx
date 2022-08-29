@@ -13,14 +13,16 @@ const Home = (): JSX.Element => {
       <div className="home-frame">
         <div className="home-frame-content">
           <div className="home-left">
-            <div>
-              <h3 className="remember">Remember, calculate and record your</h3>
-              <h3 className="water">water consumption</h3>
+            <div className="home-title">
+              <span className="remember">
+                Remember, calculate and record your
+              </span>
+              <span className="water"> water consumption</span>
             </div>
             <div className="started">
               <BtnGetStarted color="dark" />
             </div>
-            <div className="buttons">
+            <div className="buttons-down">
               <BtnGoogle />
               <BtnStore />
             </div>

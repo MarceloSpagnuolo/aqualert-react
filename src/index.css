@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: transparent; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
-  border: 6px solid #00A5EA; /* creates padding around scroll thumb */
+  border: 6px solid #00a5ea; /* creates padding around scroll thumb */
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -31,6 +31,7 @@ code {
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .animated {

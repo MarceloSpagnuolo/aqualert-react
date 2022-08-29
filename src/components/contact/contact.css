@@ -10,7 +10,7 @@
 
 .contact-content {
   width: calc(76% - 80px);
-  height: calc(62% - 120px);
+  height: fit-content;
   padding: 60px 40px;
   display: flex;
   background: radial-gradient(
@@ -218,4 +218,64 @@
 
 .check {
   margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .contact-container {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    font-size: 14px;
+  }
+  .contact-content {
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px;
+    margin: 300px 0 400px 0;
+  }
+  .contact-title,
+  .contact-subtitle {
+    text-align: center;
+  }
+  .contact-email {
+    margin: 540px 0 40px 0;
+  }
+  .contact-right,
+  .contact-right-confirm {
+    position: absolute;
+    width: 78%;
+    top: 220px;
+  }
+  .contact-right-confirm {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    top: 320px;
+  }
+  .message-1,
+  .message-2,
+  .message-3 {
+    text-align: center;
+  }
+  .contact-right {
+    margin-left: 20px;
+  }
+  .contact-title span:first-child {
+    line-height: 30px;
+  }
+  .contact-title span:last-child {
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-container {
+    font-size: 12px;
+  }
+  .title {
+    line-height: 30px;
+  }
 }

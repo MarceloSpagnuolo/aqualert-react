@@ -23,3 +23,13 @@
   box-shadow: 0 0 1rem rgba(63, 204, 247, 0.8);
   transition: all 0.4s;
 }
+
+@media (max-width: 1000px) {
+  .google-button {
+    width: 150px;
+    height: 47.9px;
+  }
+  .google-img {
+    width: 75%;
+  }
+}
