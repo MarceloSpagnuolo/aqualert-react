@@ -39,8 +39,7 @@ const Splash = (props: any) => {
         page?.classList.add("fadeIn");
         setTimeout(() => {
           page?.classList.add("free");
-        }, 500);
-
+        }, 1);
       }
     }
     const onScroll = () => {
