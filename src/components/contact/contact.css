@@ -108,7 +108,6 @@
   backdrop-filter: blur(48.2659px);
   border-radius: 11.4919px;
   border: 1px solid var(--skyText);
-  margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -116,6 +115,11 @@
   line-height: 19px;
   outline: none;
   padding: 0 20px;
+}
+
+.error {
+  border: 1px solid #982323 !important;
+  color: #982323 !important;
 }
 
 .contact-right input:focus:not(:last-child) {
@@ -141,6 +145,10 @@
   line-height: 22px;
 }
 
+.contact-right input:last-child:hover {
+  cursor: pointer;
+}
+
 .contact-right input:not(:last-child)::placeholder {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -154,7 +162,6 @@
   backdrop-filter: blur(48.2659px);
   border-radius: 11.4919px;
   border: 1px solid var(--skyText);
-  margin-bottom: 40px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -162,6 +169,14 @@
   line-height: 19px;
   outline: none;
   padding: 20px;
+}
+
+.text-error {
+  font-size: 0.7em;
+  margin: 5px 0 15px 0;
+  padding-left: 20px;
+  color: #982323;
+  height: 20px;
 }
 
 .contact-right textarea:focus {
