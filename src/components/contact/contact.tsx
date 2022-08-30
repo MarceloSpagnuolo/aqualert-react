@@ -7,12 +7,64 @@ import twitter from "../../assets/images/twitter.png";
 import check from "../../assets/images/check.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
+interface Data {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const Contact = (): JSX.Element => {
   const [show, setShow] = useState(true);
+  const [data, setData] = useState<Data>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Data>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault(e);
-    setShow(!show);
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ): void {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+    if (e.target.name === "name") setErrors({ ...errors, name: "" });
+    if (e.target.name === "email") setErrors({ ...errors, email: "" });
+    if (e.target.name === "message") setErrors({ ...errors, message: "" });
+    console.log(data, errors);
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    const regMail =
+      /^([a-zA-Z0-9._+-]+)(@[a-zA-Z0-9-.]+)(\.)+(.[a-zA-Z]{2,4}){1,2}$/gm.test(
+        data.email,
+      );
+    var _name = "";
+    var _email = "";
+    var _message = "";
+    if (!data.name) {
+      _name = "You must enter your Name";
+    }
+    if (!data.email) {
+      _email = "You must enter a Email";
+    } else if (!regMail) {
+      _email = "You must enter a valid Email";
+    }
+    if (!data.message) {
+      _message = "You must enter a Message";
+    }
+    setErrors({
+      name: _name,
+      email: _email,
+      message: _message,
+    });
+    console.log(errors);
   };
 
   return (
@@ -49,13 +101,30 @@ const Contact = (): JSX.Element => {
               className="contact-form"
               onSubmit={e => handleSubmit(e)}
             >
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                onChange={e => handleChange(e)}
+                className={errors.name.length > 0 ? "error" : ""}
+              />
+              <span className="text-error">{errors.name}</span>
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                onChange={e => handleChange(e)}
+                className={errors.email.length > 0 ? "error" : ""}
+              />
+              <span className="text-error">{errors.email}</span>
               <textarea
                 name="message"
                 rows={9}
                 placeholder="Message"
+                onChange={e => handleChange(e)}
+                className={errors.message.length > 0 ? "error" : ""}
               ></textarea>
+              <span className="text-error">{errors.message}</span>
               <input type="submit" value="Send" />
             </form>
           </div>
