@@ -82,7 +82,7 @@
     flex-direction: column;
     padding: 20px;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 0 10px;
     transform: translateX(190px);
     transition: all 0.5s;
@@ -120,5 +120,11 @@
   .c {
     transform: rotate(135deg);
     transition: all 0.5s;
+  }
+}
+
+@media (max-width: 500px) {
+  .hamburger {
+    right: 50px;
   }
 }

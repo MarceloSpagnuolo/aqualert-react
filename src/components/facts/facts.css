@@ -115,6 +115,7 @@
   }
   .table-container {
     padding: 0 7px;
+    width: 98%;
   }
   .facts-title {
     line-height: 30px;
@@ -122,5 +123,15 @@
   }
   .facts-container {
     height: calc(100vh - 300px);
+  }
+  .facts-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .facts-buttons img:last-child {
+    margin: 10px 0 0 0;
+  }
+  .facts-buttons img {
+    width: 120px;
   }
 }
