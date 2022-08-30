@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   color: var(--blueText);
+  font-size: 20px;
 }
 
 .download-content {
@@ -18,7 +19,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  font-size: 55.8265px;
+  font-size: 2.7913em;
   line-height: 81px;
   margin: 40px 0 70px 0;
 }
@@ -27,7 +28,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  font-size: 24.8744px;
+  font-size: 1.3937em;
   line-height: 29px;
   margin-bottom: 120px;
   display: flex;
@@ -48,4 +49,56 @@
 
 .download-right {
   margin-left: 60px;
+}
+
+@media (max-width: 1200px) {
+  .download-container {
+    font-size: 16px;
+    height: 100%;
+  }
+  .download-content {
+    align-items: center;
+  }
+  .download-right {
+    margin-left: 30px;
+    width: 100%;
+  }
+  .store {
+    margin-left: 20px;
+  }
+  .download-left {
+    width: 100%;
+    min-width: 50vw;
+  }
+  .download-left img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-container {
+    font-size: 12px;
+    position: relative;
+  }
+  .download-title {
+    line-height: 40px;
+    text-align: center;
+  }
+  .download-left {
+    position: absolute;
+    top: calc(100% - 150px);
+    left: calc(37vw - 160px);
+    min-width: 360px;
+  }
+  .download-right {
+    margin: 0;
+  }
+  .download-subtitle {
+    display: flex;
+    justify-content: center;
+    margin: 400px 0 20px 0;
+  }
+  .download-buttons {
+    justify-content: center;
+  }
 }

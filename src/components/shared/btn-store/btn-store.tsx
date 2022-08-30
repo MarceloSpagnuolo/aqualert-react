@@ -6,7 +6,7 @@ const BtnStore = () => {
   return (
     <div>
       <button type="button" className="store-button">
-        <img src={store} alt="google" />
+        <img src={store} alt="google" className="store-img" />
       </button>
     </div>
   );

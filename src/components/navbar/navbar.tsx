@@ -3,6 +3,7 @@ import "./navbar.css";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(0);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -21,7 +22,7 @@ const Navbar = () => {
         <div className="logo">
           <span>aqualert</span>
         </div>
-        <div className="menu">
+        <div className={show ? "menu x" : "menu"}>
           <a href="#about" className="navbar-link scroll">
             About
           </a>
@@ -31,6 +32,11 @@ const Navbar = () => {
           <a href="#contact" className="navbar-link scroll">
             Contact us
           </a>
+        </div>
+        <div className="hamburger" onClick={() => setShow(!show)}>
+          <div className={show ? "line1 z" : "line1"}></div>
+          <div className={show ? "line2 b" : "line2"}></div>
+          <div className={show ? "line3 c" : "line3"}></div>
         </div>
       </div>
     </div>

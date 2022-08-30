@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 
 .home-frame {
@@ -22,6 +23,8 @@
     );
   box-shadow: 4.5625px 31.025px 62.9625px rgba(0, 165, 234, 0.3);
   border-radius: 45.625px;
+  display: flex;
+  align-items: center;
 }
 
 .home-frame-content {
@@ -37,7 +40,7 @@
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 45.1655px;
+  font-size: 2.25em;
   line-height: 55px;
   color: var(--blueText);
 }
@@ -46,7 +49,7 @@
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 45.1655px;
+  font-size: 2.25em;
   line-height: 55px;
   color: #3fccf7;
 }
@@ -64,17 +67,6 @@
   border-radius: 100%;
 }
 
-.get {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 31px;
-  color: var(--blueText);
-  position: absolute;
-  left: 20px;
-}
-
 .home-left {
   height: 100%;
   display: flex;
@@ -85,4 +77,96 @@
 .home-image {
   width: 36vw;
   min-width: 30vw;
+}
+
+.buttons-down {
+  display: flex;
+}
+
+.buttons-down div:nth-child(2) {
+  margin-left: 60px;
+}
+
+@media (max-width: 1500px) {
+  .home-image {
+    min-width: 575px;
+    min-height: 509px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .home-container {
+    font-size: 16px;
+  }
+  .buttons-down div:nth-child(2) {
+    margin-left: 20px;
+  }
+  .home-frame-content {
+    align-items: center;
+  }
+  .home-image {
+    min-width: 335px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home-container {
+    font-size: 14px;
+  }
+  .buttons-down {
+    margin-top: 30px;
+  }
+
+  .buttons-down div:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .home-left {
+    width: 300px;
+  }
+  .home-frame-content {
+    padding: 4%;
+    width: 100%;
+  }
+  .home-left {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    position: absolute;
+    left: calc(50% - (335px / 2));
+    top: calc(46% - (300px / 2));
+  }
+  .home-left {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .started {
+    margin-top: 200px;
+    margin-left: -100px;
+  }
+  .home-title {
+    margin-bottom: 140px;
+  }
+  .home-frame {
+    align-items: stretch;
+    position: relative;
+  }
+  .home-container {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .water,
+  .remember {
+    line-height: 40px;
+  }
+  .home-frame {
+    min-width: 340px;
+  }
 }

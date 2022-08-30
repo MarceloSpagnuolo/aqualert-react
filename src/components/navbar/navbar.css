@@ -56,3 +56,75 @@
 .buttons div:nth-child(2) {
   margin-left: 60px;
 }
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .menu {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    height: 100px;
+    flex-direction: column;
+    padding: 20px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 0 10px;
+    transform: translateX(190px);
+    transition: all 0.5s;
+  }
+  .x {
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+  .line1,
+  .line2,
+  .line3 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--blueText);
+    margin-bottom: 6px;
+    transition: all 0.5s;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    transition: all 0.5s;
+  }
+  .z {
+    position: absolute;
+    top: 9px;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+  .b {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  .c {
+    transform: rotate(135deg);
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 500px) {
+  .hamburger {
+    right: 50px;
+  }
+}

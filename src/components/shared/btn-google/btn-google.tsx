@@ -6,7 +6,7 @@ const BtnGoogle = () => {
   return (
     <div>
       <button type="button" className="google-button">
-        <img src={google} alt="google" />
+        <img src={google} alt="google" className="google-img" />
       </button>
     </div>
   );
