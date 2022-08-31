@@ -1,12 +1,12 @@
 .facts-container {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: auto;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: Raleway, sans-serif;
   font-size: 20px;
-  margin-top: 150px;
 }
 
 .facts-title {
@@ -15,6 +15,7 @@
   line-height: 60.93px;
   color: var(--blueText);
   margin-left: 12%;
+  margin-top: 150px;
   margin-bottom: 60px;
 }
 
@@ -54,7 +55,34 @@
 
 .post {
   font-size: 0.8em;
+}
+
+.post a {
+  text-decoration: none;
   color: var(--skyText);
+}
+
+.post a > img {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.3s;
+}
+.post a:hover > img {
+  opacity: 1;
+  transform: translateX(-20px);
+  transition: all 0.5s;
+}
+
+.post a > span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+
+.post a:hover > span {
+  display: inline-block;
+  transform: translateX(-20px);
+  transition: all 0.5s;
 }
 
 .post img {
@@ -71,6 +99,15 @@
 
 .facts-buttons img:last-child {
   margin-left: 60px;
+}
+
+.facts-buttons a > img {
+  transition: all 0.5s;
+}
+
+.facts-buttons a:hover > img {
+  transform: scale(1.25);
+  transition: all 0.5s;
 }
 
 @media (max-width: 1280px) {
@@ -120,9 +157,6 @@
   .facts-title {
     line-height: 30px;
     text-align: center;
-  }
-  .facts-container {
-    height: calc(100vh - 300px);
   }
   .facts-buttons {
     display: flex;

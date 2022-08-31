@@ -7,16 +7,16 @@ import Features from "./components/features/features";
 import Home from "./components/home/home";
 import Phrase from "./components/phrase/phrase";
 import Splash from "./components/splash/splash";
-import smoothscroll from 'smoothscroll-polyfill';
-import {scrollToPower} from './helpers/scrollTo'
+import smoothscroll from "smoothscroll-polyfill";
+import { scrollToPower } from "./helpers/scrollTo";
 
 function App() {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     smoothscroll.polyfill();
-    }
-    (function() {
-      scrollToPower();
-    })();
+  }
+  (function () {
+    scrollToPower();
+  })();
   return (
     <div className="app-container" id="app">
       <Splash />

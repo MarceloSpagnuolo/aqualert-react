@@ -148,3 +148,15 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 500px) {
+  .features-container {
+    font-size: 12px;
+  }
+  .title span {
+    line-height: 30px;
+  }
+  .features-content {
+    margin: 30px 0 0 0;
+  }
+}

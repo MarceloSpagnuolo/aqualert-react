@@ -9,7 +9,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Features = (): JSX.Element => {
   return (
-    <div className="features-container" id="about">
+    <div className="features-container">
       <div className="features-content">
         <AnimationOnScroll animateIn="animated fadeIn" animateOnce={true}>
           <div className="title">

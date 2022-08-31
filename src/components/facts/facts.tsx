@@ -10,7 +10,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Facts = () => {
   return (
-    <div className="facts-container">
+    <div className="facts-container" id="about">
       <AnimationOnScroll animateIn="animated fadeIn" animateOnce={true}>
         <div className="facts-title">
           <span>
@@ -44,8 +44,20 @@ const Facts = () => {
                 </span>
               </div>
               <div className="facts-buttons">
-                <img src={google} alt="google" />
-                <img src={store} alt="store" />
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.overseasolutions.waterapp.app&hl=es_AR&gl=US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={google} alt="google" />
+                </a>
+                <a
+                  href="https://apps.apple.com/es/app/aqualert-water-tracker-daily/id952835359"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={store} alt="store" />
+                </a>
               </div>
             </div>
           </AnimationOnScroll>
@@ -65,8 +77,14 @@ const Facts = () => {
                 </span>
               </div>
               <div className="post">
-                <span>Read Google's post</span>
-                <img src={arrow} alt="arrow" />
+                <a
+                  href="https://developers.googleblog.com/2015/04/the-google-fit-developer-challenge.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Read Google's post</span>
+                  <img src={arrow} alt="arrow" className="arrow" />
+                </a>
               </div>
             </div>
           </AnimationOnScroll>
@@ -105,8 +123,14 @@ const Facts = () => {
                 </span>
               </div>
               <div className="post">
-                <span>Read more about the contest</span>
-                <img src={arrow} alt="arrow" />
+                <a
+                  href="https://healthyactive.org/lawmakers-constitutional-officers-cutting-sugary-drinks-for-capitolgo-challenge/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Read more about the contest</span>
+                  <img src={arrow} alt="arrow" className="arrow" />
+                </a>
               </div>
             </div>
           </AnimationOnScroll>
