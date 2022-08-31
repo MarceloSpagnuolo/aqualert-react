@@ -6,6 +6,7 @@ import facebook from "../../assets/images/facebook.png";
 import twitter from "../../assets/images/twitter.png";
 import check from "../../assets/images/check.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import SendEmail from "../../helpers/email";
 
 interface Data {
   name: string;
@@ -36,10 +37,9 @@ const Contact = (): JSX.Element => {
     if (e.target.name === "name") setErrors({ ...errors, name: "" });
     if (e.target.name === "email") setErrors({ ...errors, email: "" });
     if (e.target.name === "message") setErrors({ ...errors, message: "" });
-    console.log(data, errors);
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const regMail =
       /^([a-zA-Z0-9._+-]+)(@[a-zA-Z0-9-.]+)(\.)+(.[a-zA-Z]{2,4}){1,2}$/gm.test(
@@ -64,8 +64,23 @@ const Contact = (): JSX.Element => {
       email: _email,
       message: _message,
     });
-    console.log(errors);
+    if (data.name && data.email && regMail && data.message) {
+      const response = await SendEmail(data.name, data.email, data.message);
+      console.log("Response front", response);
+      if (response) setShow(false);
+    }
   };
+
+  function AnotherMsg(): void {
+    setData({
+      name: "",
+      email: "",
+      message: "",
+    });
+    const form = document.getElementById("form") as HTMLFormElement;
+    if (form) form.reset();
+    setShow(true);
+  }
 
   return (
     <AnimationOnScroll animateIn="animated fadeIn" animateOnce={true}>
@@ -82,16 +97,30 @@ const Contact = (): JSX.Element => {
             </div>
             <div className="contact-email">
               <img src={email} alt="email" />
-              <span>aqualertemail@aqualert.com</span>
+              <a href="mailto: contactus@aqualertapp.com">
+                contactus@aqualertapp.com
+              </a>
             </div>
             <div className="contact-social">
               <div className="social-legend">
                 <span>Follow us!</span>
               </div>
               <div className="contact-buttons">
-                <img src={instagram} alt="instagram" />
-                <img src={facebook} alt="facebook" />
-                <img src={twitter} alt="twitter" />
+                <a
+                  href="https://www.facebook.com/Aqualert"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={instagram} alt="instagram" />
+                </a>
+                <a
+                  href="https://www.instagram.com/aqualert"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={facebook} alt="facebook" />
+                </a>
+                {/* <img src={twitter} alt="twitter" /> */}
               </div>
             </div>
           </div>
@@ -100,6 +129,7 @@ const Contact = (): JSX.Element => {
               action=""
               className="contact-form"
               onSubmit={e => handleSubmit(e)}
+              id="form"
             >
               <input
                 type="text"
@@ -107,6 +137,7 @@ const Contact = (): JSX.Element => {
                 placeholder="Name"
                 onChange={e => handleChange(e)}
                 className={errors.name.length > 0 ? "error" : ""}
+                id="name"
               />
               <span className="text-error">{errors.name}</span>
               <input
@@ -115,6 +146,7 @@ const Contact = (): JSX.Element => {
                 placeholder="Email"
                 onChange={e => handleChange(e)}
                 className={errors.email.length > 0 ? "error" : ""}
+                id="email"
               />
               <span className="text-error">{errors.email}</span>
               <textarea
@@ -123,6 +155,7 @@ const Contact = (): JSX.Element => {
                 placeholder="Message"
                 onChange={e => handleChange(e)}
                 className={errors.message.length > 0 ? "error" : ""}
+                id="message"
               ></textarea>
               <span className="text-error">{errors.message}</span>
               <input type="submit" value="Send" />
@@ -143,7 +176,7 @@ const Contact = (): JSX.Element => {
               <span>We will contact you shortly.</span>
             </div>
             <div className="message-3">
-              <span>Send another message</span>
+              <span onClick={() => AnotherMsg()}>Send another message</span>
             </div>
           </div>
         </div>

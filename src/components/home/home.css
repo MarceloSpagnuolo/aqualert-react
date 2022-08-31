@@ -168,5 +168,14 @@
   }
   .home-frame {
     min-width: 340px;
+    height: 100%;
+    padding: 20px 0;
+    margin: 100px 0 40px 0;
+  }
+  .home-container {
+    font-size: 0.7em;
+  }
+  .home-image {
+    top: calc(50% - (300px / 2));
   }
 }

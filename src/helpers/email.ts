@@ -4,15 +4,15 @@ const SendEmail = async (
   message: string,
 ): Promise<boolean> => {
   const data = {
-    service_id: "INSERT_SERVICE_ID",
-    template_id: "INSERT_TEMPLATE_ID",
-    user_id: "INSERT_USER_ID",
+    service_id: "service_7vfg3xp",
+    template_id: "template_bsv2e8e",
+    user_id: "pQ1r6ESl9eGDwWmd5",
     template_params: {
       name_from: name,
       email_from: email,
       message_from: message,
     },
-    accessToken: "INSERT_AQUALERT_TOKEN_HERE",
+    accessToken: "2Q4u5NvWl3d1_TRQrtC0X",
   };
 
   let options = {
