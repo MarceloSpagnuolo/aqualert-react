@@ -16,6 +16,7 @@ interface Data {
 
 const Contact = (): JSX.Element => {
   const [show, setShow] = useState(true);
+  const [boton, setBoton] = useState("Send");
   const [data, setData] = useState<Data>({
     name: "",
     email: "",
@@ -64,9 +65,10 @@ const Contact = (): JSX.Element => {
       email: _email,
       message: _message,
     });
+    console.log(data, errors);
     if (data.name && data.email && regMail && data.message) {
+      setBoton("Sending...");
       const response = await SendEmail(data.name, data.email, data.message);
-      console.log("Response front", response);
       if (response) setShow(false);
     }
   };
@@ -79,6 +81,7 @@ const Contact = (): JSX.Element => {
     });
     const form = document.getElementById("form") as HTMLFormElement;
     if (form) form.reset();
+    setBoton("Send");
     setShow(true);
   }
 
@@ -158,7 +161,7 @@ const Contact = (): JSX.Element => {
                 id="message"
               ></textarea>
               <span className="text-error">{errors.message}</span>
-              <input type="submit" value="Send" />
+              <input type="submit" value={boton} id="buttonSend" />
             </form>
           </div>
           <div
