@@ -28,10 +28,22 @@ const Download = () => {
             </div>
             <div className="download-buttons">
               <div className="google">
-                <BtnGoogle />
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.overseasolutions.waterapp.app&hl=es_AR&gl=US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BtnGoogle />
+                </a>
               </div>
               <div className="store">
-                <BtnStore />
+                <a
+                  href="https://apps.apple.com/es/app/aqualert-water-tracker-daily/id952835359"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BtnStore />
+                </a>
               </div>
             </div>
           </div>

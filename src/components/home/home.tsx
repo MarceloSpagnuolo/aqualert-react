@@ -23,8 +23,20 @@ const Home = (): JSX.Element => {
               <BtnGetStarted color="dark" />
             </div>
             <div className="buttons-down">
-              <BtnGoogle />
-              <BtnStore />
+              <a
+                href="https://play.google.com/store/apps/details?id=com.overseasolutions.waterapp.app&hl=es_AR&gl=US"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BtnGoogle />
+              </a>
+              <a
+                href="https://apps.apple.com/es/app/aqualert-water-tracker-daily/id952835359"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BtnStore />
+              </a>
             </div>
           </div>
           <div className="home-image-container">
