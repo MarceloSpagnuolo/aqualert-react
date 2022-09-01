@@ -30,7 +30,7 @@ const Splash = (props: any) => {
       animationData,
     });
 
-    anim.setSpeed(0.3);
+    anim.setSpeed(0.6);
 
     anim.addEventListener("complete", () => onComplete());
 
