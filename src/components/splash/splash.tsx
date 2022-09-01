@@ -7,50 +7,35 @@ import animationData from "../../assets/animations/home-animation.json";
 const Splash = (props: any) => {
   const lottieRef = React.useRef<HTMLDivElement>(null);
 
+  function onComplete() {
+    let elem = document.getElementById("splash");
+    let page = document.getElementById("Page");
+
+    elem?.classList.add("animated");
+    elem?.classList.add("fadeOut");
+    page?.classList.add("animated");
+    page?.classList.add("fadeIn");
+    setTimeout(() => {
+      page?.classList.add("free");
+      elem?.classList.add("short");
+    }, 50);
+  }
+
   React.useEffect(() => {
-    var animDuration = 1000;
     const anim = lottie.loadAnimation({
       container: lottieRef.current!,
       renderer: "svg",
       loop: false,
-      autoplay: false,
+      autoplay: true,
       animationData,
     });
 
-    function animatebodymovin(duration: number) {
-      const scrollPosition = window.scrollY;
-      const scrollMax = window.innerHeight + 1;
-      console.log(scrollMax - scrollPosition);
-      const maxFrames = anim.totalFrames;
-      let elem = document.getElementById("splash");
-      let page = document.getElementById("Page");
+    anim.setSpeed(0.3);
 
-      const frame =
-        (maxFrames / (scrollMax - scrollPosition - 1)) *
-        (scrollPosition / (duration / (scrollMax - scrollPosition)));
-
-      anim.goToAndStop(frame, true);
-
-      if (scrollMax - scrollPosition <= 1 && elem) {
-        elem.classList.add("animated");
-        elem.classList.add("fadeOut");
-        elem?.classList.add("short");
-        page?.classList.add("animated");
-        page?.classList.add("fadeIn");
-        setTimeout(() => {
-          page?.classList.add("free");
-        }, 1);
-      }
-    }
-    const onScroll = () => {
-      animatebodymovin(animDuration);
-    };
-
-    document.addEventListener("scroll", onScroll);
+    anim.addEventListener("complete", () => onComplete());
 
     return () => {
       anim.destroy();
-      document.removeEventListener("scroll", onScroll);
     };
   }, []);
 
