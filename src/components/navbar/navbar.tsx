@@ -32,6 +32,9 @@ const Navbar = () => {
           <a href="#contact" className="navbar-link scroll">
             Contact us
           </a>
+          <a href="" className="navbar-link scroll">
+            Privacy policy
+          </a>
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
           <div className={show ? "line1 z" : "line1"}></div>
