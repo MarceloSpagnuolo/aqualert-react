@@ -9,6 +9,7 @@ import Phrase from "./components/phrase/phrase";
 import Splash from "./components/splash/splash";
 import smoothscroll from "smoothscroll-polyfill";
 import { scrollToPower } from "./helpers/scrollTo";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   if (typeof window !== "undefined") {
@@ -27,6 +28,7 @@ function App() {
         <Phrase />
         <Download />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

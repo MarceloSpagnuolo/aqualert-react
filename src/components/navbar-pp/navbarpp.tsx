@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
-const Navbar = () => {
+const NavbarPP = () => {
   const [scroll, setScroll] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -23,14 +23,8 @@ const Navbar = () => {
           <span>aqualert</span>
         </div>
         <div className={show ? "menu x" : "menu"}>
-          <a href="#about" className="navbar-link scroll">
-            About
-          </a>
-          <a href="#download" className="navbar-link scroll">
-            Download
-          </a>
-          <a href="#contact" className="navbar-link scroll">
-            Contact us
+          <a href="/" className="navbar-link scroll">
+            Home
           </a>
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
@@ -42,4 +36,4 @@ const Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default NavbarPP;

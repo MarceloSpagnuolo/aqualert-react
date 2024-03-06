@@ -1,0 +1,29 @@
+.main-container-privacy-policy {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 100px;
+}
+.title-pp {
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 60.93px;
+  color: var(--blueText);
+  text-align: center;
+}
+
+.subtitle-pp {
+  font-size: 1.5em;
+  font-weight: 400;
+
+  color: var(--blueText);
+}
+
+.text-pp {
+  font-size: 0.75;
+  font-weight: 400;
+
+  color: var(--blueText);
+}

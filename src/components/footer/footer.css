@@ -1,0 +1,40 @@
+.main-container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+
+  background: radial-gradient(
+        31.95% 71.19% at 22.35% 32.15%,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(
+      101.19deg,
+      rgba(255, 255, 255, 0.5) 0.88%,
+      rgba(255, 255, 255, 0.3) 97.78%
+    );
+  gap: 4px;
+}
+
+.footer-text {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 135.4%;
+}
+.footer-text-privacy {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 135.4%;
+}
+.footer-text-privacy:hover {
+  color: #00a5ea;
+  cursor: pointer;
+  text-decoration: underline;
+}

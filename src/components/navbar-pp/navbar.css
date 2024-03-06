@@ -1,0 +1,130 @@
+.navbar-container {
+  width: 100%;
+  height: 100px;
+  z-index: 99;
+  top: 0;
+  position: fixed;
+  transition: all 0.5s;
+}
+
+.bgcolor {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s;
+}
+
+.navbar-content {
+  width: 100% - 12.03%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 11.98% 0 12%;
+}
+
+.logo {
+  font-size: 30.5047px;
+  line-height: 34px;
+  color: var(--blueText);
+  font-weight: 700;
+}
+
+.menu {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--blueText);
+  font-size: 21.09px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover {
+  transform: scale(1.13);
+  font-weight: bold;
+  line-height: 24.76px;
+  transition: all 0.3s;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons div:nth-child(2) {
+  margin-left: 60px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .menu {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    height: 100px;
+    flex-direction: column;
+    padding: 20px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 0 10px;
+    transform: translateX(190px);
+    transition: all 0.5s;
+  }
+  .x {
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+  .line1,
+  .line2,
+  .line3 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--blueText);
+    margin-bottom: 6px;
+    transition: all 0.5s;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    transition: all 0.5s;
+  }
+  .z {
+    position: absolute;
+    top: 9px;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+  .b {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  .c {
+    transform: rotate(135deg);
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 500px) {
+  .hamburger {
+    right: 50px;
+  }
+}
